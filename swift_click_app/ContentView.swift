@@ -1,4 +1,4 @@
-//
+ //
 //  ContentView.swift
 //  swift_click_app
 //
@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hello,  world!")
         }
         .padding()
     }
