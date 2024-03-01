@@ -1,10 +1,3 @@
- //
-//  ContentView.swift
-//  swift_click_app
-//
-//  Created by Jonathan Narine on 2/29/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -14,21 +7,45 @@ struct ContentView: View {
     func increment() {
         currentNumber+=1
     }
+    
+    func reset() {
+        currentNumber = 0
+    }
         
     var body: some View {
         Text("\(currentNumber)")
             .font(.system(size: 80))
-        Button(action: {
-            increment()
-        }) {
-            Text("Increment")
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+        HStack {
+            Button(action: {
+                increment()
+            }) {
+                Text("Increment")
+                    .padding()
+            }
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+
+            Button(action: {
+                reset()
+            }) {
+                Text("Reset")
+                    .padding()
+            }
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
         }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .controlSize(.large)
     }
 }
+
+// Preview code...
+
+
+// Preview code...
+
 
 #Preview {
     ContentView()
