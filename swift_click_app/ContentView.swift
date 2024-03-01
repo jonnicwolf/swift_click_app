@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var currentNumber: Int = 0
+    
+    func increment() {
+        currentNumber+=1
+    }
+        
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello,  world!")
+        Text("\(currentNumber)")
+            .font(.system(size: 80))
+        Button(action: {
+            increment()
+        }) {
+            Text("Increment")
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
         }
-        .padding()
     }
 }
 
